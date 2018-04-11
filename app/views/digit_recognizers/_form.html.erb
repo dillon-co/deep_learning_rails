@@ -1,0 +1,26 @@
+<%= form_for(digit_recognizer) do |f| %>
+<div class="container-fluid text-center spacer">
+  <h1 class="text-white">Show Your Image To Spock Jr.</h1>
+  <div class="spacer"></div>
+  <%= f.file_field :mnist_image, class:'btn-secondary' %>
+  <div class="spacer"></div>
+
+  <% if digit_recognizer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(digit_recognizer.errors.count, "error") %> prohibited this digit_recognizer from being saved:</h2>
+
+      <ul>
+      <% digit_recognizer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <br>
+
+  <div class="actions">
+    <%= f.submit "Guess The Number!", class:'btn btn-primary' %>
+  </div>
+</div>
+<% end %>

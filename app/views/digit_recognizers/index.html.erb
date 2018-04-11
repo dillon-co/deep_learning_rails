@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Digit Recognizers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @digit_recognizers.each do |digit_recognizer| %>
+      <tr>
+        <td><%= link_to 'Show', digit_recognizer %></td>
+        <td><%= link_to 'Edit', edit_digit_recognizer_path(digit_recognizer) %></td>
+        <td><%= link_to 'Destroy', digit_recognizer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Digit Recognizer', new_digit_recognizer_path %>

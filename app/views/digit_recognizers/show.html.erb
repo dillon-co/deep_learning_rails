@@ -1,0 +1,10 @@
+<div class="container-fluid text-center spacer">
+  <p id="notice" class="text-white"><%= notice %></p>
+
+<%= image_tag @digit_recognizer.mnist_image.url(:regular) %>
+<br>
+<br>
+<h3 class="text-white">Spock Jr. thinks this is a <%= @digit_recognizer.guess %></h3>
+
+<%= link_to 'Back', new_digit_recognizer_path %>
+</div>
