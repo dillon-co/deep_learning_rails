@@ -1,24 +1,18 @@
-# README
+# HOW TO BEGIN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+clone this repo.
 
-Things you may want to cover:
 
-* Ruby version
+## Training
 
-* System dependencies
 
-* Configuration
+open a console, run the command `DigitRecognizer.new.train_and_save_model`
 
-* Database creation
+then watch it train! You should expect to see `accuracy: ~0.95` which is 95% accuracy.
 
-* Database initialization
+if it's anything less than 90 something's wrong.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Running.
+Then just run your rails server and navigate to the home page. Upload an MNIST image of 1
+digit and watch it classify it
+  
